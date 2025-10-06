@@ -9,14 +9,11 @@ You can explore the entire machine learning process in the included Jupyter note
 
 ## Project Overview
 
-The project is structured around **two predictive models**:
+The project is structured around two predictive models:
 
 1. **Base Model** – Uses only internal company data.  
 2. **Extended Model** – Incorporates additional macroeconomic indicators from the countries where the sister companies operate.
-
----
-
-## Dataset
+The models are used by the company according to their needs and and preferences
 
 The dataset provided in this repository is **anonymized** and represents **5% of the original data** for efficiency.  
 
@@ -50,13 +47,4 @@ The dataset provided in this repository is **anonymized** and represents **5% of
 | Column | Description |
 |--------|-------------|
 | `COLLECTED` (`COBRADO`) | Indicates if the invoice has been paid (`1`) or not (`0`). |
-
----
-
-## How to Run
-
-1. Clone the repository:
-```bash
-git clone https://github.com/your-username/invoice-payment-prediction.git
-cd invoice-payment-prediction
 
