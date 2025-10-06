@@ -4,8 +4,8 @@ You can see the whole machine learning process in the next jupyter notebook:
 
 
 The project is structured around two predictive models:
-Base Model – uses only internal company data.
-Extended Model – incorporates additional macroeconomic indicators from the countries where the sister companies operate.
+Base Model –> uses only internal company data.
+Extended Model –> incorporates additional macroeconomic indicators from the countries where the sister companies operate.
 
 The dataset provided in this repository represents 5% of the original data for efficiency reasons. If you wish to run the project on the full dataset, it can be downloaded from the following source:
 
