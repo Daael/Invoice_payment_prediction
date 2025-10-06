@@ -1,32 +1,62 @@
-# Invoice_payment_prediction
-The following project presents a real-world machine learning application developed for a multinational telecommunications company. Its primary goal is to predict whether an invoice issued to a sister company will be paid or not.
-You can see the whole machine learning process in the next jupyter notebook:
+# Invoice Payment Prediction
 
+This project presents a **real-world machine learning application** developed for a multinational telecommunications company.  
+The primary goal is to **predict whether an invoice issued to a sister company will be paid or not**.
 
-The project is structured around two predictive models:
-Base Model –> uses only internal company data.
-Extended Model –> incorporates additional macroeconomic indicators from the countries where the sister companies operate.
+You can explore the entire machine learning process in the included Jupyter notebooks.
 
+---
 
-The dataset provided is anonimized; The csv file in this repository represents 5% of the original data for efficiency reasons. If you wish to run the project on the full dataset, it can be downloaded from the following source:
-https://drive.google.com/file/d/1hlmHiU9xRZyPFD9c9qu5ZDSIZHB5Q_FX/view?usp=sharing
+## Project Overview
 
-Independent variables:
-- PURCHASE_CODE (CODIGO_COMPRAS): Code of the type of product that was ordered for the invoice.
-- INVOICE_FEE (FEE_FACTURAS): Numeric quantity of the fee to pay.
-- INVOICE_FEE_EUROS (FEE_FACTURAS_EUROS): Numeric quantity of the fee to pay in euros.
-- INVOICE_CURRENCY (MONEDA_FACTURA): Currency type of the issued invoice.
-- OPERATOR (OPERADORA): Name of the company that ordered the Invoice.
-- OPERATOR_COUNTRY (OPERADORA_PAIS): Country of operation of the company that ordered the invoice.
-- SUPPLIER_BAD_DEBT (PROVEEDOR_BAD_DEBT): Suppliers had declared bankruptcy in the past or had problems with creditors.
-- SUPPLIER_EVER_BLOCKED (PROVEEDOR_BLOQUEADO_ALGUNA_VEZ): If the Supplier has not paid on time in the past and has been blocked.
-- SUPPLIER_RECONCILED (PROVEEDOR_CONCILIADO): It defines if a conciliation process has to be done before emitting the invoice.
-- SUPPLIER_LOGISTICS (PROVEEDOR_LOGISTICO): Supplier that does the logistics of the operation.
-- SUPPLIER_TYPE (PROVEEDOR_TIPO): Size of the supplier (small, medium, etc).
-- SUPPLIER_HAS_GROUP (PROVEEDOR_TIENE_GRUPO): Indicates if the supplier is part of a group.
-- SUPPLIER_GROUP (PROVEEDOR_GRUPO): Name of the group that is part of.
-- EXPENSE_TYPE (TIPO_GASTO): Type of expense (investment, movil, etc.).
+The project is structured around **two predictive models**:
 
-Dependent variable:
-- COLLECTED (COBRADO): Shows if the invoice has been paid or not.
+1. **Base Model** – Uses only internal company data.  
+2. **Extended Model** – Incorporates additional macroeconomic indicators from the countries where the sister companies operate.
+
+---
+
+## Dataset
+
+The dataset provided in this repository is **anonymized** and represents **5% of the original data** for efficiency.  
+
+- **Full dataset download:** [Google Drive link](https://drive.google.com/file/d/1hlmHiU9xRZyPFD9c9qu5ZDSIZHB5Q_FX/view?usp=sharing)
+
+---
+
+## Variables
+
+### Independent Variables
+
+| Column | Description |
+|--------|-------------|
+| `PURCHASE_CODE` (`CODIGO_COMPRAS`) | Code of the type of product ordered for the invoice. |
+| `INVOICE_FEE` (`FEE_FACTURAS`) | Numeric quantity of the fee to pay. |
+| `INVOICE_FEE_EUROS` (`FEE_FACTURAS_EUROS`) | Numeric quantity of the fee in euros. |
+| `INVOICE_CURRENCY` (`MONEDA_FACTURA`) | Currency type of the issued invoice. |
+| `OPERATOR` (`OPERADORA`) | Name of the company that ordered the invoice. |
+| `OPERATOR_COUNTRY` (`OPERADORA_PAIS`) | Country of operation of the company. |
+| `SUPPLIER_BAD_DEBT` (`PROVEEDOR_BAD_DEBT`) | Supplier had bankruptcy history or creditor issues. |
+| `SUPPLIER_EVER_BLOCKED` (`PROVEEDOR_BLOQUEADO_ALGUNA_VEZ`) | Whether the supplier has been blocked in the past. |
+| `SUPPLIER_RECONCILED` (`PROVEEDOR_CONCILIADO`) | Indicates if a conciliation process is required before invoicing. |
+| `SUPPLIER_LOGISTICS` (`PROVEEDOR_LOGISTICO`) | Supplier responsible for logistics. |
+| `SUPPLIER_TYPE` (`PROVEEDOR_TIPO`) | Size of the supplier (small, medium, etc.). |
+| `SUPPLIER_HAS_GROUP` (`PROVEEDOR_TIENE_GRUPO`) | Whether the supplier is part of a group. |
+| `SUPPLIER_GROUP` (`PROVEEDOR_GRUPO`) | Name of the group the supplier belongs to. |
+| `EXPENSE_TYPE` (`TIPO_GASTO`) | Type of expense (investment, mobile, etc.). |
+
+### Dependent Variable
+
+| Column | Description |
+|--------|-------------|
+| `COLLECTED` (`COBRADO`) | Indicates if the invoice has been paid (`1`) or not (`0`). |
+
+---
+
+## How to Run
+
+1. Clone the repository:
+```bash
+git clone https://github.com/your-username/invoice-payment-prediction.git
+cd invoice-payment-prediction
 
