@@ -9,7 +9,7 @@ Extended Model –> incorporates additional macroeconomic indicators from the co
 
 
 The dataset provided is anonimized; The csv file in this repository represents 5% of the original data for efficiency reasons. If you wish to run the project on the full dataset, it can be downloaded from the following source:
-https://docs.google.com/spreadsheets/d/1ZN4CqO7DnnjoYrlBbVqBUcjt8lK7KGRw/edit?usp=sharing&ouid=103397986873263038565&rtpof=true&sd=true
+https://drive.google.com/file/d/1hlmHiU9xRZyPFD9c9qu5ZDSIZHB5Q_FX/view?usp=sharing
 
 Independent variables:
 - PURCHASE_CODE (CODIGO_COMPRAS): Code of the type of product that was ordered for the invoice.
