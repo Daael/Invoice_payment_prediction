@@ -1,0 +1,406 @@
+ref_area.label,time,obs_value
+Argentina,2023Q4,5.731
+Argentina,2023Q4,5.731
+Argentina,2023Q4,5.731
+Argentina,2023Q3,5.729
+Argentina,2023Q3,5.729
+Argentina,2023Q3,5.729
+Argentina,2023Q2,6.229
+Argentina,2023Q2,6.229
+Argentina,2023Q2,6.229
+Argentina,2023Q1,6.878
+Argentina,2023Q1,6.878
+Argentina,2023Q1,6.878
+Argentina,2022Q4,6.285
+Argentina,2022Q4,6.285
+Argentina,2022Q4,6.285
+Argentina,2022Q3,7.115
+Argentina,2022Q3,7.115
+Argentina,2022Q3,7.115
+Argentina,2022Q2,6.86
+Argentina,2022Q2,6.86
+Argentina,2022Q2,6.86
+Argentina,2022Q1,6.964
+Argentina,2022Q1,6.964
+Argentina,2022Q1,6.964
+Argentina,2021Q4,6.971
+Argentina,2021Q4,6.971
+Argentina,2021Q4,6.971
+Argentina,2021Q3,8.243
+Argentina,2021Q3,8.243
+Argentina,2021Q3,8.243
+Argentina,2021Q2,9.608
+Argentina,2021Q2,9.608
+Argentina,2021Q2,9.608
+Argentina,2021Q1,10.171
+Argentina,2021Q1,10.171
+Argentina,2021Q1,10.171
+Argentina,2020Q4,10.962
+Argentina,2020Q4,10.962
+Argentina,2020Q4,10.962
+Argentina,2020Q3,11.724
+Argentina,2020Q3,11.724
+Argentina,2020Q3,11.724
+Argentina,2020Q2,13.084
+Argentina,2020Q2,13.084
+Argentina,2020Q2,13.084
+Argentina,2020Q1,10.379
+Argentina,2020Q1,10.379
+Argentina,2020Q1,10.379
+Argentina,2019Q4,8.901
+Argentina,2019Q4,8.901
+Argentina,2019Q4,8.901
+Argentina,2019Q3,9.737
+Argentina,2019Q3,9.737
+Argentina,2019Q3,9.737
+Argentina,2019Q2,10.651
+Argentina,2019Q2,10.651
+Argentina,2019Q2,10.651
+Argentina,2019Q1,10.079
+Argentina,2019Q1,10.079
+Argentina,2019Q1,10.079
+Argentina,2018Q4,9.132
+Argentina,2018Q4,9.132
+Argentina,2018Q4,9.132
+Argentina,2018Q3,8.989
+Argentina,2018Q3,8.989
+Argentina,2018Q3,8.989
+Argentina,2018Q2,9.61
+Argentina,2018Q2,9.61
+Argentina,2018Q2,9.61
+Argentina,2018Q1,9.153
+Argentina,2018Q1,9.153
+Argentina,2018Q1,9.153
+Brazil,2023Q4,7.37
+Brazil,2023Q4,7.37
+Brazil,2023Q4,7.37
+Brazil,2023Q3,7.659
+Brazil,2023Q3,7.659
+Brazil,2023Q3,7.659
+Brazil,2023Q2,8.012
+Brazil,2023Q2,8.012
+Brazil,2023Q2,8.012
+Brazil,2023Q1,8.758
+Brazil,2023Q1,8.758
+Brazil,2023Q1,8.758
+Brazil,2022Q4,7.91
+Brazil,2022Q4,7.91
+Brazil,2022Q4,7.91
+Brazil,2022Q3,8.66
+Brazil,2022Q3,8.66
+Brazil,2022Q3,8.66
+Brazil,2022Q2,9.269
+Brazil,2022Q2,9.269
+Brazil,2022Q2,9.269
+Brazil,2022Q1,11.103
+Brazil,2022Q1,11.103
+Brazil,2022Q1,11.103
+Brazil,2021Q4,11.086
+Brazil,2021Q4,11.086
+Brazil,2021Q4,11.086
+Brazil,2021Q3,12.585
+Brazil,2021Q3,12.585
+Brazil,2021Q3,12.585
+Brazil,2021Q2,14.203
+Brazil,2021Q2,14.203
+Brazil,2021Q2,14.203
+Brazil,2021Q1,14.871
+Brazil,2021Q1,14.871
+Brazil,2021Q1,14.871
+Brazil,2020Q4,14.131
+Brazil,2020Q4,14.131
+Brazil,2020Q4,14.131
+Brazil,2020Q3,14.86
+Brazil,2020Q3,14.86
+Brazil,2020Q3,14.86
+Brazil,2020Q2,13.571
+Brazil,2020Q2,13.571
+Brazil,2020Q2,13.571
+Brazil,2020Q1,12.323
+Brazil,2020Q1,12.323
+Brazil,2020Q1,12.323
+Brazil,2019Q4,11.032
+Brazil,2019Q4,11.032
+Brazil,2019Q4,11.032
+Brazil,2019Q3,11.841
+Brazil,2019Q3,11.841
+Brazil,2019Q3,11.841
+Brazil,2019Q2,12.081
+Brazil,2019Q2,12.081
+Brazil,2019Q2,12.081
+Brazil,2019Q1,12.799
+Brazil,2019Q1,12.799
+Brazil,2019Q1,12.799
+Brazil,2018Q4,11.677
+Brazil,2018Q4,11.677
+Brazil,2018Q4,11.677
+Brazil,2018Q3,11.961
+Brazil,2018Q3,11.961
+Brazil,2018Q3,11.961
+Brazil,2018Q2,12.514
+Brazil,2018Q2,12.514
+Brazil,2018Q2,12.514
+Brazil,2018Q1,13.177
+Brazil,2018Q1,13.177
+Brazil,2018Q1,13.177
+Costa Rica,2023Q4,6.799
+Costa Rica,2023Q4,6.799
+Costa Rica,2023Q4,6.799
+Costa Rica,2023Q3,7.592
+Costa Rica,2023Q3,7.592
+Costa Rica,2023Q3,7.592
+Costa Rica,2023Q2,8.971
+Costa Rica,2023Q2,8.971
+Costa Rica,2023Q2,8.971
+Costa Rica,2023Q1,9.849
+Costa Rica,2023Q1,9.849
+Costa Rica,2023Q1,9.849
+Costa Rica,2022Q4,10.887
+Costa Rica,2022Q4,10.887
+Costa Rica,2022Q4,10.887
+Costa Rica,2022Q3,11.107
+Costa Rica,2022Q3,11.107
+Costa Rica,2022Q3,11.107
+Costa Rica,2022Q2,10.727
+Costa Rica,2022Q2,10.727
+Costa Rica,2022Q2,10.727
+Costa Rica,2022Q1,12.588
+Costa Rica,2022Q1,12.588
+Costa Rica,2022Q1,12.588
+Costa Rica,2021Q4,12.682
+Costa Rica,2021Q4,12.682
+Costa Rica,2021Q4,12.682
+Costa Rica,2021Q3,14.111
+Costa Rica,2021Q3,14.111
+Costa Rica,2021Q3,14.111
+Costa Rica,2021Q2,16.489
+Costa Rica,2021Q2,16.489
+Costa Rica,2021Q2,16.489
+Costa Rica,2021Q1,17.321
+Costa Rica,2021Q1,17.321
+Costa Rica,2021Q1,17.321
+Costa Rica,2020Q4,17.735
+Costa Rica,2020Q4,17.735
+Costa Rica,2020Q4,17.735
+Costa Rica,2020Q3,18.471
+Costa Rica,2020Q3,18.471
+Costa Rica,2020Q3,18.471
+Costa Rica,2020Q2,18.471
+Costa Rica,2020Q2,18.471
+Costa Rica,2020Q2,18.471
+Costa Rica,2020Q1,11.532
+Costa Rica,2020Q1,11.532
+Costa Rica,2020Q1,11.532
+Costa Rica,2019Q4,11.421
+Costa Rica,2019Q4,11.421
+Costa Rica,2019Q4,11.421
+Costa Rica,2019Q3,10.421
+Costa Rica,2019Q3,10.421
+Costa Rica,2019Q3,10.421
+Costa Rica,2019Q2,11.166
+Costa Rica,2019Q2,11.166
+Costa Rica,2019Q2,11.166
+Costa Rica,2019Q1,10.206
+Costa Rica,2019Q1,10.206
+Costa Rica,2019Q1,10.206
+Costa Rica,2018Q4,10.961
+Costa Rica,2018Q4,10.961
+Costa Rica,2018Q4,10.961
+Costa Rica,2018Q3,9.017
+Costa Rica,2018Q3,9.017
+Costa Rica,2018Q3,9.017
+Costa Rica,2018Q2,7.203
+Costa Rica,2018Q2,7.203
+Costa Rica,2018Q2,7.203
+Costa Rica,2018Q1,8.767
+Costa Rica,2018Q1,8.767
+Costa Rica,2018Q1,8.767
+Ecuador,2023Q4,3.302
+Ecuador,2023Q4,3.302
+Ecuador,2023Q4,3.302
+Ecuador,2023Q3,3.349
+Ecuador,2023Q3,3.349
+Ecuador,2023Q3,3.349
+Ecuador,2023Q2,3.433
+Ecuador,2023Q2,3.433
+Ecuador,2023Q2,3.433
+Ecuador,2023Q1,3.383
+Ecuador,2023Q1,3.383
+Ecuador,2023Q1,3.383
+Ecuador,2022Q4,3.304
+Ecuador,2022Q4,3.304
+Ecuador,2022Q4,3.304
+Ecuador,2022Q3,3.674
+Ecuador,2022Q3,3.674
+Ecuador,2022Q3,3.674
+Ecuador,2022Q2,3.787
+Ecuador,2022Q2,3.787
+Ecuador,2022Q2,3.787
+Ecuador,2022Q1,4.29
+Ecuador,2022Q1,4.29
+Ecuador,2022Q1,4.29
+Ecuador,2021Q4,3.996
+Ecuador,2021Q4,3.996
+Ecuador,2021Q4,3.996
+Ecuador,2021Q3,4.54
+Ecuador,2021Q3,4.54
+Ecuador,2021Q3,4.54
+Ecuador,2021Q2,5.08
+Ecuador,2021Q2,5.08
+Ecuador,2021Q2,5.08
+Ecuador,2021Q1,4.601
+Ecuador,2021Q1,4.601
+Ecuador,2021Q1,4.601
+Ecuador,2020Q4,4.08
+Ecuador,2020Q4,4.08
+Ecuador,2020Q4,4.08
+Ecuador,2020Q3,5.784
+Ecuador,2020Q3,5.784
+Ecuador,2020Q3,5.784
+Ecuador,2020Q2,8.922
+Ecuador,2020Q2,8.922
+Ecuador,2020Q2,8.922
+Ecuador,2019Q4,3.376
+Ecuador,2019Q4,3.376
+Ecuador,2019Q4,3.376
+Ecuador,2019Q3,4.204
+Ecuador,2019Q3,4.204
+Ecuador,2019Q3,4.204
+Ecuador,2019Q2,3.708
+Ecuador,2019Q2,3.708
+Ecuador,2019Q2,3.708
+Ecuador,2019Q1,3.949
+Ecuador,2019Q1,3.949
+Ecuador,2019Q1,3.949
+Ecuador,2018Q4,3.007
+Ecuador,2018Q4,3.007
+Ecuador,2018Q4,3.007
+Ecuador,2018Q3,3.45
+Ecuador,2018Q3,3.45
+Ecuador,2018Q3,3.45
+Ecuador,2018Q2,3.621
+Ecuador,2018Q2,3.621
+Ecuador,2018Q2,3.621
+Ecuador,2018Q1,4.034
+Ecuador,2018Q1,4.034
+Ecuador,2018Q1,4.034
+United Kingdom of Great Britain and Northern Ireland,2020Q3,4.9
+United Kingdom of Great Britain and Northern Ireland,2020Q3,4.9
+United Kingdom of Great Britain and Northern Ireland,2020Q3,4.9
+United Kingdom of Great Britain and Northern Ireland,2020Q2,3.8
+United Kingdom of Great Britain and Northern Ireland,2020Q2,3.8
+United Kingdom of Great Britain and Northern Ireland,2020Q2,3.8
+United Kingdom of Great Britain and Northern Ireland,2020Q1,3.9
+United Kingdom of Great Britain and Northern Ireland,2020Q1,3.9
+United Kingdom of Great Britain and Northern Ireland,2020Q1,3.9
+United Kingdom of Great Britain and Northern Ireland,2019Q4,3.6
+United Kingdom of Great Britain and Northern Ireland,2019Q4,3.6
+United Kingdom of Great Britain and Northern Ireland,2019Q4,3.6
+United Kingdom of Great Britain and Northern Ireland,2019Q3,3.9
+United Kingdom of Great Britain and Northern Ireland,2019Q3,3.9
+United Kingdom of Great Britain and Northern Ireland,2019Q3,3.9
+United Kingdom of Great Britain and Northern Ireland,2019Q2,3.7
+United Kingdom of Great Britain and Northern Ireland,2019Q2,3.7
+United Kingdom of Great Britain and Northern Ireland,2019Q2,3.7
+United Kingdom of Great Britain and Northern Ireland,2019Q1,3.7
+United Kingdom of Great Britain and Northern Ireland,2019Q1,3.7
+United Kingdom of Great Britain and Northern Ireland,2019Q1,3.7
+United Kingdom of Great Britain and Northern Ireland,2018Q4,3.8
+United Kingdom of Great Britain and Northern Ireland,2018Q4,3.8
+United Kingdom of Great Britain and Northern Ireland,2018Q4,3.8
+United Kingdom of Great Britain and Northern Ireland,2018Q3,4.2
+United Kingdom of Great Britain and Northern Ireland,2018Q3,4.2
+United Kingdom of Great Britain and Northern Ireland,2018Q3,4.2
+United Kingdom of Great Britain and Northern Ireland,2018Q2,3.9
+United Kingdom of Great Britain and Northern Ireland,2018Q2,3.9
+United Kingdom of Great Britain and Northern Ireland,2018Q2,3.9
+United Kingdom of Great Britain and Northern Ireland,2018Q1,4.2
+United Kingdom of Great Britain and Northern Ireland,2018Q1,4.2
+United Kingdom of Great Britain and Northern Ireland,2018Q1,4.2
+Guatemala,2021Q4,2.174
+Guatemala,2021Q4,2.174
+Guatemala,2021Q4,2.174
+Guatemala,2019Q4,1.915
+Guatemala,2019Q4,1.915
+Guatemala,2019Q4,1.915
+Guatemala,2019Q2,2.483
+Guatemala,2019Q2,2.483
+Guatemala,2019Q2,2.483
+Guatemala,2018Q4,1.949
+Guatemala,2018Q4,1.949
+Guatemala,2018Q4,1.949
+Guatemala,2018Q2,2.624
+Guatemala,2018Q2,2.624
+Guatemala,2018Q2,2.624
+Mexico,2023Q4,2.663
+Mexico,2023Q4,2.663
+Mexico,2023Q4,2.663
+Mexico,2023Q3,2.955
+Mexico,2023Q3,2.955
+Mexico,2023Q3,2.955
+Mexico,2023Q2,2.801
+Mexico,2023Q2,2.801
+Mexico,2023Q2,2.801
+Mexico,2023Q1,2.639
+Mexico,2023Q1,2.639
+Mexico,2023Q1,2.639
+Mexico,2022Q4,2.974
+Mexico,2022Q4,2.974
+Mexico,2022Q4,2.974
+Mexico,2022Q3,3.402
+Mexico,2022Q3,3.402
+Mexico,2022Q3,3.402
+Mexico,2022Q2,3.214
+Mexico,2022Q2,3.214
+Mexico,2022Q2,3.214
+Mexico,2022Q1,3.441
+Mexico,2022Q1,3.441
+Mexico,2022Q1,3.441
+Mexico,2021Q4,3.642
+Mexico,2021Q4,3.642
+Mexico,2021Q4,3.642
+Mexico,2021Q3,4.218
+Mexico,2021Q3,4.218
+Mexico,2021Q3,4.218
+Mexico,2021Q2,3.89
+Mexico,2021Q2,3.89
+Mexico,2021Q2,3.89
+Mexico,2021Q1,4.327
+Mexico,2021Q1,4.327
+Mexico,2021Q1,4.327
+Mexico,2020Q4,4.518
+Mexico,2020Q4,4.518
+Mexico,2020Q4,4.518
+Mexico,2020Q3,5.131
+Mexico,2020Q3,5.131
+Mexico,2020Q3,5.131
+Mexico,2020Q2,4.823
+Mexico,2020Q2,4.823
+Mexico,2020Q2,4.823
+Mexico,2020Q1,3.404
+Mexico,2020Q1,3.404
+Mexico,2020Q1,3.404
+Mexico,2019Q4,3.361
+Mexico,2019Q4,3.361
+Mexico,2019Q4,3.361
+Mexico,2019Q3,3.712
+Mexico,2019Q3,3.712
+Mexico,2019Q3,3.712
+Mexico,2019Q2,3.507
+Mexico,2019Q2,3.507
+Mexico,2019Q2,3.507
+Mexico,2019Q1,3.327
+Mexico,2019Q1,3.327
+Mexico,2019Q1,3.327
+Mexico,2018Q4,3.246
+Mexico,2018Q4,3.246
+Mexico,2018Q4,3.246
+Mexico,2018Q3,3.425
+Mexico,2018Q3,3.425
+Mexico,2018Q3,3.425
+Mexico,2018Q2,3.315
+Mexico,2018Q2,3.315
+Mexico,2018Q2,3.315
+Mexico,2018Q1,3.108
+Mexico,2018Q1,3.108
+Mexico,2018Q1,3.108
