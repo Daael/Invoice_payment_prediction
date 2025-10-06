@@ -13,6 +13,7 @@ The project is structured around two predictive models:
 
 1. **Base Model** – Uses only internal company data.  
 2. **Extended Model** – Incorporates additional macroeconomic indicators from the countries where the sister companies operate.
+
 The models are used by the company according to their needs and and preferences
 
 The dataset provided in this repository is **anonymized** and represents **5% of the original data** for efficiency.  
