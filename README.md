@@ -4,7 +4,7 @@ This project presents a **real-world machine learning application** developed fo
 The primary goal is to **predict whether an invoice issued to a sister company will be paid or not**.
 
 You can explore the entire machine learning process in the included Jupyter notebooks.
-
+https://github.com/Daael/Invoice_payment_prediction/blob/main/Invoice_Prediction.ipynb
 ---
 
 ## Project Overview
