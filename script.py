@@ -10,18 +10,10 @@ from sklearn.ensemble import RandomForestClassifier, GradientBoostingClassifier,
 from sklearn.preprocessing import LabelEncoder, StandardScaler, PolynomialFeatures
 from sklearn.metrics import accuracy_score, classification_report, confusion_matrix, roc_curve, auc, precision_recall_curve
 from sklearn.metrics import ConfusionMatrixDisplay, RocCurveDisplay
-from sklearn.linear_model import LogisticRegression
-from sklearn.svm import SVC
-from sklearn.neighbors import KNeighborsClassifier
-from sklearn.naive_bayes import GaussianNB
-from sklearn.tree import DecisionTreeClassifier
-from sklearn.neural_network import MLPClassifier
 from statsmodels.stats.outliers_influence import variance_inflation_factor
 from imblearn.over_sampling import SMOTE
-from sklearn.decomposition import PCA
 from scipy.stats import chi2_contingency
 from itertools import combinations
-import time
 import joblib
 
 # Set the document path to the current directory
@@ -118,7 +110,7 @@ corona_end_date = pd.to_datetime('2021-12-31')
 df['CORONAVIRUS_PERIOD'] = df['DATE_INVOICE'].apply(lambda x: 1 if corona_start_date <= x <= corona_end_date else 0)
 
 # Create a copy of the data frame before adding the macroeconomic variables.
-df_original = df.copy()
+df_2 = df.copy()
 
 # Grouping Venezuela with "Other".
 df.loc[df['OPERATOR_COUNTRY'] == 'VE', 'OPERATOR_COUNTRY'] = 'Other'
@@ -223,31 +215,37 @@ hdi_values = {
     'GT': 0,
     'NI': 0,
     'Other': 1
-    }
+}
 df['HDI'] = df['OPERATOR_COUNTRY'].map(hdi_values)
 
-# Imputing values for the macro variables
+# Impute missing values using the mean within each OPERATOR_COUNTRY
 macro_vars = ['ER_SDR', 'ER_USD', 'IR', 'UR', 'GDP_N', 'GDP_R', 
-        'GDP_N_ChangeRate', 'GDP_R_ChangeRate', 'Population', 'Inflation']
+              'GDP_N_ChangeRate', 'GDP_R_ChangeRate', 'Population', 'Inflation']
 
 for var in macro_vars:
     # Fill using group mean
     df[var] = df.groupby('OPERATOR_COUNTRY')[var].transform(lambda x: x.fillna(x.mean()))
-
+    
     # Fill remaining NaNs (like 'Other') using overall mean
     df[var] = df[var].fillna(df[var].mean())
-    
+
+
+# During the outer merge, 59 rows were created for Operator_Country–month–year combinations with no corresponding invoices.
+# These unmatched entries are removed to maintain data consistency.
+df = df.dropna(subset=['DATE_INVOICE'])
+
 # We drop the date-related columns for both datasets because we already used them for merging.
-df = df.drop(columns=['DATE_INVOICE', 'Date', 'MONTH_DATE_INVOICE'])
-df_original = df_original.drop(columns=['DATE_INVOICE', 'MONTH_DATE_INVOICE'])
+df = df.drop(columns=['DATE_INVOICE', 'Date', 'MONTH_DATE_INVOICE', 'YEAR_DATE_INVOICE'])
+df_2 = df_2.drop(columns=['DATE_INVOICE', 'MONTH_DATE_INVOICE', 'YEAR_DATE_INVOICE'])
+
 # We also drop the OPERATOR_COUNTRY variable due to its strong correlation with OPERATOR and because it has already been used for merging.
 df = df.drop(columns=['OPERATOR_COUNTRY'])
-df_original = df_original.drop(columns=['OPERATOR_COUNTRY'])
+df_2 = df_2.drop(columns=['OPERATOR_COUNTRY'])
 
-# Drop the values with high VIF
+# Drop the values with high VIF and check again
 df = df.drop(columns=['ER_USD','ER_SDR', 'GDP_R', 'GDP_N_ChangeRate'])
 
-### Running the Model ###
+### DATA SPLIT ###
 # Doing one-hot encoding to the categorical variables (variables of type object)
 df = pd.get_dummies(df, columns=df.select_dtypes(include=['object']).columns)
 
@@ -256,93 +254,59 @@ X = df.drop(columns=['COLLECTED'])
 y = df['COLLECTED']
 
 # Split the data into training (80%) and testing (20%) sets
-X_train_full, X_test, y_train_full, y_test = train_test_split(X, y, test_size=0.2, random_state=4)
+# X_train_full, X_test, y_train_full, y_test = train_test_split(X, y, test_size=0.2, random_state=4)
 
 # Split the training data into training (75%) and validation (25%) sets
-X_train, X_val, y_train, y_val = train_test_split(X_train_full, y_train_full, test_size=0.25, random_state=4)
+# X_train, X_val, y_train, y_val = train_test_split(X_train_full, y_train_full, test_size=0.25, random_state=4)
 
-# Apply SMOTE to the training data
-smote = SMOTE(random_state=42)
-X_train, y_train = smote.fit_resample(X_train, y_train)
+# Load the models
+rf_model = joblib.load("final_model_random_forest.pkl")
+gb_model = joblib.load("final_model_gradient_boosting.pkl")
 
-param_grids = {
-    "Gradient Boosting": {
-        'n_estimators': [150, 200],
-        'learning_rate': [0.05, 0.1],
-        'max_depth': [5]
-    },
-    "Random Forest": {
-        'n_estimators': [100, 200],
-        'max_features': ['log2'],
-        'max_depth': [10],
-        'bootstrap': [True]
-    }
+### DATA SPLIT 2 ###
+# Doing one-hot encoding to the categorical variables (variables of type object)
+df_2 = pd.get_dummies(df_2, columns=df_2.select_dtypes(include=['object']).columns)
+
+# Separate features and target variable
+X_2 = df_2.drop(columns=['COLLECTED'])
+y_2 = df_2['COLLECTED']
+
+# Split the data into training (80%) and testing (20%) sets
+# X_2_train_full, X_2_test, y_2_train_full, y_2_test = train_test_split(X_2, y_2, test_size=0.2, random_state=4)
+
+# Split the training data into training (75%) and validation (25%) sets
+# X_2_train, X_2_val, y_2_train, y_2_val = train_test_split(X_2_train_full, y_2_train_full, test_size=0.25, random_state=4)
+
+# Load the models 2
+rf_model_2 = joblib.load("final_model_2_random_forest.pkl")
+gb_model_2 = joblib.load("final_model_2_gradient_boosting.pkl")
+
+### Model ###
+
+# Store models in dictionary
+results = {
+    "Gradient Boosting": gb_model,
+    "Random Forest": rf_model
 }
-
-# Models to tune
-models = {
-    "Gradient Boosting": GradientBoostingClassifier(),
-    "Random Forest": RandomForestClassifier(random_state=4),
-}
-
-# Dictionary to hold results
-results = {}
-
-# Train and evaluate each model with hyperparameter tuning using RandomizedSearchCV
-for model_name, model in models.items():
-    param_grid = param_grids[model_name]
-    random_search = RandomizedSearchCV(model, param_grid, n_iter=10, cv=5, scoring='accuracy', random_state=4)
-    random_search.fit(X_train, y_train)
-    
-    # Best model from random search
-    best_model = random_search.best_estimator_
-    
-    # Predict on the validation set
-    y_val_pred = best_model.predict(X_val)
-    val_accuracy = accuracy_score(y_val, y_val_pred)
-    val_report = classification_report(y_val, y_val_pred)
-    
-    results[model_name] = {
-        "Validation Accuracy": val_accuracy,
-        "Validation Report": val_report,
-        "Best Parameters": random_search.best_params_
-    }
-
-# Display the results
-for model_name, result in results.items():
-    print(f"Model: {model_name}")
-    print(f"Best Parameters: {result['Best Parameters']}")
-    print(f"Validation Accuracy: {result['Validation Accuracy']}")
-    print("Validation Classification Report:")
-    print(result['Validation Report'])
-    print("-" * 80)
-
-### Model Evaluation ###
 
 # Use the best model to predict on the test set
-for model_name, result in results.items():
-    # Retrieve the best model with the best parameters
-    best_model = models[model_name].set_params(**result["Best Parameters"])
-    
-    # Fit the best model on the full training data
-    best_model.fit(X_train_full, y_train_full)
+for model_name, best_model in results.items():
     
     # Predict on the test set
-    y_test_pred = best_model.predict(X_test)
+    y_test_pred = best_model.predict(X)
     
     # Evaluate the performance on the test set
-    test_accuracy = accuracy_score(y_test, y_test_pred)
-    test_report = classification_report(y_test, y_test_pred)
-    conf_matrix = confusion_matrix(y_test, y_test_pred)
+    test_accuracy = accuracy_score(y, y_test_pred)
+    test_report = classification_report(y, y_test_pred)
+    conf_matrix = confusion_matrix(y, y_test_pred)
     
-    # Calculate ROC curve and AUC
-    y_test_prob = best_model.predict_proba(X_test)[:, 1]
-    fpr, tpr, _ = roc_curve(y_test, y_test_prob)
+    # Calculate ROC curve
+    y_test_prob = best_model.predict_proba(X)[:, 1]
+    fpr, tpr, _ = roc_curve(y, y_test_prob)
     roc_auc = auc(fpr, tpr)
     
     # Display the results
     print(f"Model: {model_name}")
-    print(f"Best Parameters: {result['Best Parameters']}")
     print(f"Test Accuracy: {test_accuracy}")
     print("Test Classification Report:")
     print(test_report)
@@ -350,15 +314,15 @@ for model_name, result in results.items():
     print(conf_matrix)
     print("-" * 80)
     
-    fig, ax = plt.subplots(figsize=(5, 5))  # Adjust the figure size as needed
+    fig, ax = plt.subplots(figsize=(5, 5))
     disp = ConfusionMatrixDisplay(confusion_matrix=conf_matrix)
-    disp.plot(ax=ax, cmap=plt.cm.Greens)  # Change the colormap
+    disp.plot(ax=ax, cmap=plt.cm.Greens)
 
     # Customize the display
     ax.set_title(f'{model_name} Confusion Matrix')
     ax.set_xlabel('Predicted Label')
     ax.set_ylabel('True Label')
-    plt.tight_layout()  # Adjust the layout to fit everything neatly
+    plt.tight_layout() 
     plt.show()
     
     # Plot ROC curve
@@ -373,51 +337,54 @@ for model_name, result in results.items():
     plt.legend(loc="lower right")
     plt.show()
 
-# Initialize the plot
-plt.figure()
+# Store models in dictionary
+results_2 = {
+    "Gradient Boosting": gb_model_2,
+    "Random Forest": rf_model_2
+}
 
-# Iterate through each model and plot the ROC curve
-for model_name, result in results.items():
-    # Retrieve the best model with the best parameters
-    best_model = models[model_name].set_params(**result["Best Parameters"])
+# Use the best model to predict on the test set
+for model_name, best_model_2 in results_2.items():
     
-    # Fit the best model on the full training data
-    best_model.fit(X_train_full, y_train_full)
+    # Predict on the test set
+    y_2_test_pred = best_model_2.predict(X_2)
     
-    # Predict the probabilities on the test set
-    y_test_prob = best_model.predict_proba(X_test)[:, 1]
+    # Evaluate the performance on the test set
+    test_accuracy_2 = accuracy_score(y_2, y_2_test_pred)
+    test_report_2 = classification_report(y_2, y_2_test_pred)
+    conf_matrix = confusion_matrix(y_2, y_2_test_pred)
     
     # Calculate ROC curve and AUC
-    fpr, tpr, _ = roc_curve(y_test, y_test_prob)
+    y_2_test_prob = best_model_2.predict_proba(X_2)[:, 1]
+    fpr, tpr, _ = roc_curve(y_2, y_2_test_prob)
     roc_auc = auc(fpr, tpr)
     
-    # Plot ROC curve for the current model
-    plt.plot(fpr, tpr, lw=2, label=f'{model_name} (AUC = {roc_auc:.2f})')
-
-# Plot the diagonal line for random guessing
-plt.plot([0, 1], [0, 1], color='navy', lw=2, linestyle='--')
-
-# Set plot limits
-plt.xlim([0.0, 1.0])
-plt.ylim([0.0, 1.05])
-
-# Set plot labels and title
-plt.xlabel('False Positive Rate')
-plt.ylabel('True Positive Rate')
-plt.title('Receiver Operating Characteristic for Different Models')
-
-# Show legend
-plt.legend(loc="lower right")
-
-# Show the plot
-plt.show()
-
-
-
-
-
-
-
+    # Display the results
+    print(f"Model: {model_name} on df_2")
+    print(f"Test Accuracy: {test_accuracy_2}")
+    print("Test Classification Report:")
+    print(test_report_2)
+    print("Confusion Matrix:")
+    print(conf_matrix)
+    print("-" * 80)
+    
+    # Plot confusion matrix
+    disp = ConfusionMatrixDisplay(confusion_matrix=conf_matrix)
+    disp.plot(cmap=plt.cm.Blues)
+    plt.title(f'{model_name} Confusion Matrix')
+    plt.show()
+    
+    # Plot ROC curve
+    plt.figure()
+    plt.plot(fpr, tpr, color='darkorange', lw=2, label=f'ROC curve (area = {roc_auc:.2f})')
+    plt.plot([0, 1], [0, 1], color='navy', lw=2, linestyle='--')
+    plt.xlim([0.0, 1.0])
+    plt.ylim([0.0, 1.05])
+    plt.xlabel('False Positive Rate')
+    plt.ylabel('True Positive Rate')
+    plt.title(f'{model_name} Receiver Operating Characteristic')
+    plt.legend(loc="lower right")
+    plt.show()
 
 
 
