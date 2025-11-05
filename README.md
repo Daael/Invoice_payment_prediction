@@ -1,4 +1,4 @@
-# Invoice Payment Prediction
+# Predicting Invoice Payment
 
 This project presents a **real-world machine learning application** developed for a multinational telecommunications company.  
 The primary goal is to **predict whether an invoice issued to a sister company will be paid or not**.
