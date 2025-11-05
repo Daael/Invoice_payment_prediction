@@ -43,7 +43,7 @@ The model achieved an **overall accuracy of over 93%** in predicting whether new
 
 With this capability, **the company can now anticipate which invoices are unlikely to be settled and take proactive actions** with those operators. Beyond prediction, the analysis discovered some interesting insights. For example, macroeconomic indicators proved significant in the model, revealing that **a country’s economic stability plays a direct role in an operator’s ability to fulfill its financial obligations**.  
 
-![Confusion Matrix](https://raw.githubusercontent.com/Daael/Invoice_payment_prediction/main/Images/ConfusionMatrix.png)
+![Confusion Matrix](https://raw.githubusercontent.com/Daael/Invoice_payment_prediction/main/Images/ConfusionMatrix.PNG)
 
 ---
 
@@ -51,13 +51,13 @@ With this capability, **the company can now anticipate which invoices are unlike
 
 Some interesting Insights found were:
 
-![Variables Preview](https://raw.githubusercontent.com/Daael/Invoice_payment_prediction/main/Images/Variables1.png)
+![Variables](https://raw.githubusercontent.com/Daael/Invoice_payment_prediction/main/Images/Variables1.PNG)
 - The macroeconomic variables included in the model were found to have significant influence on invoice payment predictions. This means that an operator’s financial reliability is closely related to the economic conditions of its country. This is a key insight: the company can proactively flag invoices from operators in unstable economic environments, allowing them to either delay issuance, allocate resources more cautiously, or apply targeted pressure on these high-risk invoices. By doing so, the subsidiary can potentially save substantial amounts and reduce financial exposure.
 
-![Fees Preview](https://raw.githubusercontent.com/Daael/Invoice_payment_prediction/main/Images/Fees.png)
+![Fees](https://raw.githubusercontent.com/Daael/Invoice_payment_prediction/main/Images/Fees.PNG)
 - One might assume that invoices with higher fees would be harder to pay (the more expensive the invoice, the greater the risk.). And the analysis confirmed that, the amount of fees in euros is important for the invoice risk assesment. Also, the identity of the product or service provider proved a good predictor. Along with the macroeconomic variables, we recommend focusing in the invoice amount and supplier.
 
-![Coronavirus Preview](https://raw.githubusercontent.com/Daael/Invoice_payment_prediction/main/Images/Coronavirus.png)
+![Coronavirus](https://raw.githubusercontent.com/Daael/Invoice_payment_prediction/main/Images/Coronavirus.PNG)
 - It seems that the risk of paying an invoice generated in the coronavirus period shows diffent behavior. Given this shift, we recommend training a separate model using only post-2022 data. This ensures the prediction engine reflects the current economic environment and more accurately represents the payment patterns of newly issued invoices, leading to more reliable risk assessment moving forward.
 
 ## Variables
