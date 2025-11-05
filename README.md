@@ -45,6 +45,13 @@ With this capability, **the company can now anticipate which invoices are unlike
 
 ![Confusion Matrix Preview](https://raw.githubusercontent.com/Daael/Invoice_payment_prediction/main/Images/ConfusionMatrix.png)
 
+![Confusion Matrix](https://raw.githubusercontent.com/Daael/Invoice_payment_prediction/main/Images/ConfusionMatrix.PNG)
+
+or this:
+![Confusion Matrix](Images/ConfusionMatrix.PNG)
+
+
+
 ---
 
 ## Insights and Recommendations ##
