@@ -2,7 +2,11 @@
 
 This project presents a **real-world machine learning application** developed for a multinational telecommunications company.  
 The primary goal is to **predict whether an invoice issued to a sister company will be paid or not**.
+
+
 **Skills used**: Statistical Modelling, EDA, Data Cleaning, Feature Engineering, Model Selection and Evaluation, Hyperparameter Tunning, Virtual Machines etc.
+
+
 **Technologies**: Python, Azure, Matplotlib, Numpy, Pandas, Seaborn, Sklearn, Sheets, Jupyter, etc.
 
 If you want to deep dive in the techniques used, you can explore the entire machine learning process in the next Jupyter notebooks.
@@ -12,8 +16,7 @@ If you want to deep dive in the techniques used, you can explore the entire mach
 
 ## Overview
 
-A global telecom subsidiary issues invoices to operators worldwide for technology products and services. These invoices are not always paid, or they take too long to be paid. The company wants to predict which newly generated invoices were most likely to go unpaid. 
-The goal: Put pressure in the high risk invoices operators, while adapting budget and resource planning based only on invoices with a high likelihood of payment. This enables informed business decisions regarding operators with elevated non-payment risk.
+A global telecom subsidiary issues invoices to operators worldwide for technology products and services. These invoices are not always paid, or they take too long to be paid. The company wants to predict which newly generated invoices were most likely to go unpaid, with the objective of putting pressure in the high risk invoices operators, while adapting budget and resource planning based only on invoices with a high likelihood of payment. This enables informed business decisions regarding operators with elevated non-payment risk.
 
 **Goal**: Build a machine-learning-based risk scoring system to flag invoices likely to become overdue at the moment they are issued.
 
