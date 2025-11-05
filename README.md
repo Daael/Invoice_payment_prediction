@@ -43,7 +43,7 @@ The model achieved an **overall accuracy of over 93%** in predicting whether new
 
 With this capability, **the company can now anticipate which invoices are unlikely to be settled and take proactive actions** with those operators. Beyond prediction, the analysis discovered some interesting insights. For example, macroeconomic indicators proved significant in the model, revealing that **a country’s economic stability plays a direct role in an operator’s ability to fulfill its financial obligations**.  
 
-!(https://raw.githubusercontent.com/Daael/Invoice_payment_prediction/main/Images/ConfusionMatrix.png)
+![Confusion Matrix](https://raw.githubusercontent.com/Daael/Invoice_payment_prediction/main/Images/ConfusionMatrix.png)
 
 ---
 
